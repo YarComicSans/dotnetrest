@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="TestData\Xmls\CorrectDeadlock.xml" />
+    <None Remove="TestData\Xmls\DeadlockIdPropertyWithEmptyValue.xml" />
+    <None Remove="TestData\Xmls\DeadlockIdPropertyWithNoValue.xml" />
+    <None Remove="TestData\Xmls\DeadlockLasttranstartedPropertyWithEmptyValue.xml" />
+    <None Remove="TestData\Xmls\DeadlocktLasttranstartedPropertyWithNoValue.xml" />
+    <None Remove="TestData\Xmls\DeadlockWithNoClosingTag.xml" />
+    <None Remove="TestData\Xmls\DeadlockWithNoOpeningTag.xml" />
+    <None Remove="TestData\Xmls\DeadlockWithoutIdProperty.xml" />
+    <None Remove="TestData\Xmls\DeadlockWithoutLasttranstartedProperty.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="TestData\Xmls\CorrectDeadlock.xml" />
+    <EmbeddedResource Include="TestData\Xmls\DeadlockIdPropertyWithEmptyValue.xml" />
+    <EmbeddedResource Include="TestData\Xmls\DeadlockIdPropertyWithNoValue.xml" />
+    <EmbeddedResource Include="TestData\Xmls\DeadlockLasttranstartedPropertyWithEmptyValue.xml" />
+    <EmbeddedResource Include="TestData\Xmls\DeadlocktLasttranstartedPropertyWithNoValue.xml" />
+    <EmbeddedResource Include="TestData\Xmls\DeadlockWithNoClosingTag.xml" />
+    <EmbeddedResource Include="TestData\Xmls\DeadlockWithNoOpeningTag.xml" />
+    <EmbeddedResource Include="TestData\Xmls\DeadlockWithoutIdProperty.xml" />
+    <EmbeddedResource Include="TestData\Xmls\DeadlockWithoutLasttranstartedProperty.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Moq" Version="4.16.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="coverlet.collector" Version="1.2.0" />
+    <PackageReference Include="Xunit.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\API\API.csproj" />
+  </ItemGroup>
+
+</Project>
